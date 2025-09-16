@@ -1,0 +1,267 @@
+/* === Global Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === Base Styles === */
+body {
+    background: linear-gradient(135deg, #0A0F1F, #1B2437);
+    font-family: 'Quicksand', sans-serif;
+    color: #EAEAEA;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* === Typography === */
+h1, h2, h3, h4, h5 {
+    color: #4CB3FF;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+p, li, td {
+    color: #D5D5D5;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* === Page Header === */
+.page-header {
+    background: linear-gradient(135deg, #0052A3, #0096FF);
+    padding: 80px 20px 100px 20px;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+    position: relative;
+}
+
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: #4CB3FF;
+    border-radius: 2px;
+    box-shadow: 0 0 10px #4CB3FF;
+}
+
+.page-header .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-logo {
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    color: #d0eaff;
+}
+
+/* === Sections === */
+section {
+    background: #121826;
+    border: 1px solid #1E293B;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 150, 255, 0.08);
+    width: 85%;
+    max-width: 900px;
+    margin: 90px auto 40px auto;
+    padding: 60px 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 150, 255, 0.2);
+}
+
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #4CB3FF;
+}
+
+/* === Table Styling === */
+.table {
+    border-radius: 14px;
+    overflow: hidden;
+    border-collapse: collapse;
+    width: 100%;
+    background: #1C2538;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.5);
+}
+
+.table th, .table td {
+    padding: 18px;
+    text-align: left;
+}
+
+.table th {
+    background: #007FFF;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+    transition: background 0.3s ease;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #232F49;
+}
+
+.table tbody tr:hover {
+    background: #2C3B5A;
+}
+
+/* === Links === */
+a {
+    color: #4CB3FF;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #66C6FF;
+}
+
+/* === Footer === */
+footer {
+    background: #0A0F1F;
+    color: #A0AFC6;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 90px;
+    border-top: 1px solid #1E293B;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+}
+
+footer a {
+    color: #4CB3FF;
+}
+
+footer a:hover {
+    color: #66C6FF;
+}
+/* === Skills Section === */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.skills-list li {
+    background: #1C2538;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    color: #EAEAEA;
+    box-shadow: 0 4px 15px rgba(0, 150, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: scale(1.05);
+    background: #232F49;
+}
+
+/* === Projects Section === */
+.project-card {
+    background: #1C2538;
+    border-radius: 14px;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,150,255,0.2);
+}
+
+.project-card h3 {
+    color: #4CB3FF;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 15px;
+}
+
+/* === Resume Section === */
+.btn-download {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #007FFF;
+    color: #ffffff;
+    border-radius: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0,150,255,0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #0096FF;
+    transform: scale(1.05);
+}
+
+/* === Social Links === */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.social-links a {
+    font-size: 1.1rem;
+    color: #4CB3FF;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #66C6FF;
+    transform: scale(1.1);
+}
+
